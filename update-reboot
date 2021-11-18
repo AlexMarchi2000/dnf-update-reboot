@@ -1,0 +1,10 @@
+#!/bin/bash
+#Autori: Marchi Alex
+
+sudo dnf check-update
+if [ $? -eq 100 ]
+then
+	sudo dnf -y upgrade
+	reboot
+	exit 0
+fi
